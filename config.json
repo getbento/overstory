@@ -1,0 +1,61 @@
+{
+    "theme": {
+        "name": "Overstory",
+        "author": "CMYK",
+        "fields": {
+            "site": {
+              "title": "Site Options",
+              "type": "section",
+              "items": {
+                "newsletter": {
+            			"title": "Newsletter Capture"
+            			"type": "section",
+            			"items": {
+            				"cta": {
+            					"title": "CTA",
+            					"type": "text"
+            				},
+            				"img": {
+            					"title": "Image",
+            					"type": "image"
+            				}
+            			}
+            		}
+              }
+            },
+            "footer": {
+        			"title": "Footer",
+        			"type": "section",
+        			"items": {
+        				"blurb": {
+        					"title": "Blurb",
+        					"type": "wysiwyg"
+        				},
+                "copyright": {
+                  "title": "Copyright",
+                  "type": "wysiwyg"
+                }
+        			}
+        		},
+            "custom_styles": {
+                "name": "custom_styles",
+                "type": "section",
+                "items": {
+                    "CSS": "code",
+                    "JavaScript": "code",
+                    "bootstrap_variable_overrides": "code"
+                }
+            }
+        }
+    },
+    "navs": [
+      {
+        "name": "Main Navigation",
+        "slug": "main"
+      },
+      {
+        "name": "Footer",
+        "slug": "footer"
+      }
+    ]
+}

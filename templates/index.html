@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% import 'template-parts/blocks/wysiwyg.html' as wysiwyg %}
+{% import 'template-parts/blocks/separator.html' as separator %}
+
+{% block content %}
+  <main>
+    <article class="homepage">
+      {% for section in current.fields.flexible_content.sections %}
+        {% if section.sectiontype == 'WYSIWYG' %}
+          {{ wysiwyg.render(section.wysiwyg.content) }}
+        {% elif section.sectiontype == 'Separator' %}
+          {{ separator.render(section.separator.color) }}
+        {% endif %}
+      {% endfor %}
+    </article>
+  </main>
+{% endblock %}

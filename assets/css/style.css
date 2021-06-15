@@ -1,0 +1,307 @@
+/*--------------------------------*\
+    GLOBALS
+\*--------------------------------*/
+/* for mixins, variables, and global styles */
+/*
+ * Responsive Breakpoints
+ ***************************/
+/*
+ * Margins / Max Widths
+ ***************************/
+/*
+ * Font Stacks
+ *
+ ***************************/
+/*
+  * FUTURA
+  *   @weights
+  *    + Light: 300
+  *    + Book: 400
+  *    + Medium: 500
+  *    + Demi: 600
+  *    + Heavy: 700
+  */
+/*
+  * Font Styles
+  *
+  * @parameter $responsive : boolean, whether the font style needs responsive styles
+  * @parameter $mobile : boolean, whether to only output mobile style
+  ***************************/
+/* Hero */
+/* H1 components */
+/* H1 */
+/* H1 components */
+/* H2 */
+/* H2 Components */
+/* H3 */
+/* H3 Components */
+/* H4 */
+/* H4 Components */
+/* H5 */
+/* H5 Components */
+/* H6 */
+/* H6 Components */
+/* Paragraph */
+/* Paragraph Components */
+/* Nav Font */
+/* Nav Font Components */
+/* Nav Font */
+/* Nav Font Components */
+/* Nav Font */
+/* Nav Font Components */
+/* Caption Font */
+/* Nav Font Components */
+/* Link Font */
+/* Nav Font Components */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font-size: 100%;
+  font: inherit;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+.clear {
+  clear: both;
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  left: 0;
+  top: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5% !important;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 340px) {
+  html {
+    font-size: 50% !important;
+  }
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: futura-pt, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-size: 6.4rem;
+  line-height: 4.4rem;
+  letter-spacing: 0.25remx;
+  text-transform: none;
+}
+
+h2 {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-size: 4.6rem;
+  line-height: 5.9rem;
+  letter-spacing: 0.25rem;
+  text-transform: none;
+}
+
+h3 {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+  letter-spacing: 0.365rem;
+  text-transform: none;
+}
+
+@media screen and (max-width: 767px) {
+  h3 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 2.9rem;
+    letter-spacing: 0.179rem;
+    text-transform: none;
+  }
+}
+
+h4 {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-size: 2.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.25rem;
+  text-transform: none;
+}
+
+h5 {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: futura-pt, sans-serif;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.14rem;
+  text-transform: none;
+}
+
+@media screen and (max-width: 767px) {
+  p {
+    font-family: futura-pt, sans-serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.089rem;
+    text-transform: none;
+  }
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input, button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+}
+
+.container-margins {
+  width: calc(100% - calc(16px * 2));
+  max-width: 830px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (min-width: 1440px) {
+  .container-margins {
+    max-width: 959px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container-margins {
+    width: calc(100vw - calc(16px * 2));
+  }
+}
+
+.content-margins {
+  width: calc(100% - calc(32px * 2));
+  max-width: 628px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (min-width: 1440px) {
+  .content-margins {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 767px) {
+  .content-margins {
+    width: calc(100vw - calc(32px * 2));
+  }
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+/*--------------------------------*\
+  STRUCTURE
+\*--------------------------------*/
+/* for global site structure */
+/*--------------------------------*\
+   TEMPLATES
+\*--------------------------------*/
+/* for page template and archive structure */
+/*--------------------------------*\
+   BLOCKS
+\*--------------------------------*/
+/* for gutenberg blocks, native or custom */

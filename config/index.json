@@ -1,0 +1,109 @@
+{
+  "name": "Front Page",
+  "fields": {
+    "header": {
+      "title": "Header",
+      "type": "section",
+      "items": {
+        "gallery": {
+          "title": "Gallery",
+          "type": "section",
+          "items": {
+            "images": {
+              "title": "Images",
+              "type": "repeater",
+              "items": {
+                "img": {
+                  "title": "Image",
+                  "type": "image"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "flexible_content": {
+      "title": "Flexible Content",
+      "type": "section",
+      "items": {
+        "sections": {
+          "title": "Sections",
+          "type": "repeater",
+          "items": {
+            "anchor": "text",
+            "sectiontype": {
+              "title": "Type",
+              "type": "dropdown",
+              "options": [
+                "WYSIWYG",
+                "Separator",
+                "Accordion",
+                "Team"
+              ]
+            },
+            "wysiwyg": {
+              "title": "WYSIWYG",
+              "type": "section",
+              "display_logic": {
+                "sectiontype": {
+                  "operator": "==",
+                  "value": "WYSIWYG"
+                }
+              },
+              "items": {
+                "content": "wysiwyg"
+              }
+            },
+            "separator": {
+              "title": "Separator",
+              "type": "section",
+              "display_logic": {
+                "sectiontype": {
+                  "operator": "==",
+                  "value": "Separator"
+                }
+              },
+              "items": {
+                "color": "color"
+              }
+            },
+            "accordion": {
+              "title": "Accordion",
+              "type": "section",
+              "display_logic": {
+                "sectiontype": {
+                  "operator": "==",
+                  "value": "Accordion"
+                }
+              },
+              "items": {
+                "title": "text",
+                "sections": {
+                  "title": "Sections",
+                  "type": "repeater",
+                  "items": {
+                    "title": "text",
+                    "content": "wysiwyg",
+                    "style": {
+                      "title": "Header Style",
+                      "type": "dropdown",
+                      "options": {
+                        "large": "Large",
+                        "small": "Small"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "wireframe": [
+    "section-header",
+    "section-flexible_content"
+  ]
+}
