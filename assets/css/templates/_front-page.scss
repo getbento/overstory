@@ -1,0 +1,171 @@
+.homepage {
+  @include for-size(no-mobile) {
+    padding-right: 50%;
+    position: relative;
+    padding-top: 9.4rem;
+    &-upper {
+      min-height: calc(100vh - 9.4rem);
+      padding-bottom: 9.4rem;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      flex-direction: column;
+      svg {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+      }
+    } &-lower {
+      max-width: 40rem;
+    }
+  }
+
+  &-gallery {
+    @include for-size(no-mobile) {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      padding-left: 3.2rem;
+      &__inner {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 9.4rem;
+        padding-bottom: 9.4rem;
+        min-height: calc(100vh - 9.4rem);
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+
+    &__nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      margin-top: 1.6rem;
+      align-self: center;
+      background-image: linear-gradient(0deg, rgba($red, 1) 0%, rgba($red, 1) 100%);
+      background-size: 100% 1px;
+      background-repeat: no-repeat;
+      background-position: left center;
+      &-indicator {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3.6rem;
+        height: 3.6rem;
+        border-radius: 50%;
+        border: 1px solid $red;
+        pointer-events: none;
+        opacity: 0;
+        box-sizing: border-box;
+        &.active {
+          opacity: 1;
+          transition: left 300ms $bezier;
+        }
+      }
+
+      .slick-arrow {
+        width: 1.2rem;
+        height: 2.4rem;
+        display: block;
+        cursor: pointer;
+        background-image: url('../img/chevron.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        @include flex(0,0,auto);
+        margin: 0 3.2rem;
+      }
+
+      .slick-prev {
+        order: 1;
+        transform: scaleX(-1);
+        margin-left: 0;
+      }.slick-next {
+        order: 3;
+        margin-right: 0;
+      }
+
+      .slick-dots {
+        @include flex(1,0,0);
+        order: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li {
+          width: 3.6rem;
+          height: 3.6rem;
+          button {
+            width: 3.6rem;
+            height: 3.6rem;
+            display: block;
+            color: transparent;
+            position: relative;
+            &::before {
+              content: '';
+              position: absolute;
+              left: calc(50% - 0.5rem);
+              top: calc(50% - 0.5rem);
+              width: 1rem;
+              height: 1rem;
+              border: 1px solid $red;
+              border-radius: 50%;
+              transition: background 300ms $bezier;
+              box-sizing: border-box;
+            }
+
+            &:hover, &:focus {
+              &::before {
+                background-color: $white;
+              }
+            }
+          }
+
+          &.slick-active {
+            button {
+              &::before {
+                background-color: $red;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    &__list {
+      &-item {
+        position: relative;
+        &::before {
+          content: '';
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 0;
+          padding-bottom: 148%;
+        }
+        img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &:not(.slick-initialized) {
+        .homepage-gallery__list-item {
+          &:nth-child(n+2) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

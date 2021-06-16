@@ -1,0 +1,213 @@
+.site-header {
+  padding: 2.6rem 4.6rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  pointer-events: none;
+  z-index: 10;
+  @include for-size(mobile) {
+    padding: 2rem;
+  }
+  &__branding {
+    @include flex(0,0,auto);
+    max-width: 8.9rem;
+    margin-right: 9rem;
+    pointer-events: auto;
+    color: $red;
+    @include for-size(tablet) {
+      margin-right: 5.6rem;
+    }
+    img, svg {
+      width: 100%;
+      height: auto;
+    } a {
+      transition: color 300ms $bezier;
+      &:hover, &:focus {
+        color: $white;
+      }
+    }
+  } &__aux {
+    @include flex(1,0,0);
+    @include for-size(mobile) {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: linear-gradient(180deg, #0D0D0D 0%, #0B0B0A 99.44%, #0B0B0A 100%);
+      pointer-events: none;
+      z-index: 9;
+      clip-path: polygon(0 0, 100% 0, 100% 0%, 0% 0%);
+      transition: clip-path 800ms $bezier;
+      padding: 3rem;
+      padding-top: 10.2rem;
+      &.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
+    }
+  } &__mobilebranding {
+    @include for-size(no-mobile) {
+      display: none;
+    } @include for-size(mobile) {
+      display: block;
+      padding-bottom: 4.4rem;
+      border-bottom: 1px solid rgba($offwhite, 0.4);
+      margin-bottom: 7.6rem;
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 25.1rem;
+      }
+    }
+  }
+  &__toggle {
+    pointer-events: auto;
+    @include for-size(no-mobile) {
+      display: none;
+    } @include for-size(mobile) {
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 7.4rem;
+      height: 7.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba($white, 0.4);
+      background-color: $terblack;
+      z-index: 10;
+      transition: color 300ms $bezier, background 300ms $bezier;
+      &:hover, &:focus {
+        background-color: $white;
+        color: $terblack;
+      }
+    }
+    &.active {
+      .hamburger-icon {
+        &__line {
+          transform: scaleX(0);
+          &:nth-child(1) {
+            transition-delay: 0ms;
+          } &:nth-child(2) {
+            transition-delay: 100ms;
+          } &:nth-child(3) {
+            transition-delay: 200ms;
+          }
+        }
+        &__cross {
+          &:first-child {
+            transition-delay: 500ms;
+            transform: rotate(45deg) scaleX(1);
+          } &:last-child {
+            transition-delay: 600ms;
+            transform: rotate(-45deg) scaleX(1);
+          }
+        }
+      }
+    }
+  }
+
+  &__nav {
+    pointer-events: auto;
+    &__list {
+      @include for-size(no-mobile) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      &-item {
+        margin: 0 4rem;
+        text-align: center;
+        @include for-size(tablet) {
+          margin: 0 1.6rem;
+          &:first-child {
+            margin-left: 0;
+          } &:last-child {
+            margin-right: 0;
+          }
+        }
+        &:first-child {
+          margin-left: 0;
+        } &:last-child {
+          margin-right: 0;
+        } @include for-size(mobile) {
+          margin: 4rem 0;
+          &:first-child {
+            margin-top: 0;
+          } &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        &__link {
+          @include nav-font-style;
+          text-decoration: none;
+          transition: color 300ms $bezier;
+          &:hover, &:focus {
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hamburger-icon {
+  width: 2.8rem;
+  height: 2rem;
+  position: relative;
+  color: inherit;
+  &__inactive {
+    position: absolute;
+    left: calc(50% - 1.4rem);
+    top: calc(50% - 1rem);
+    width: 2.8rem;
+    height: 2rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+  } &__active {
+    position: absolute;
+    left: calc(50% - 0.8rem);
+    top: calc(50% - 0.8rem);
+    width: 1.6rem;
+    height: 1.6rem;
+    display: flex;
+  }
+  &__line {
+    width: 2.8rem;
+    height: 0.1rem;
+    background: currentColor;
+    transform-origin: left center;
+    transition: transform 300ms $bezier;
+    &:nth-child(1) {
+      transition-delay: 300ms;
+    } &:nth-child(2) {
+      transition-delay: 400ms;
+    } &:nth-child(3) {
+      transition-delay: 500ms;
+    }
+  } &__cross {
+    width: 2rem;
+    height: 0.1rem;
+    background: currentColor;
+    position: absolute;
+    transition: transform 300ms $bezier;
+    &:first-child {
+      left: 0.1rem;
+      top: 0;
+      transform-origin: left center;
+      transform: rotate(45deg) scaleX(0);
+    } &:last-child {
+      right: 0.1rem;
+      top: 0;
+      transform-origin: right center;
+      transform: rotate(-45deg) scaleX(0);
+    }
+  }
+}

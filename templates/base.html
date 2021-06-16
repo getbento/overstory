@@ -85,6 +85,33 @@
   <div id="page" class="container">
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
     <header class="site-header">
+      <h1 class="site-header__branding">
+        <a href="{{ account.site.url }}" rel="home">
+          {% include "svg/logo.html" %}
+          <span class="screen-reader-text">Home</span>
+        </a>
+      </h1>
+      <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-header__aux">
+        <span class="screen-reader-text">Toggle Menu</span>
+        {% include "svg/hamburger.html" %}
+      </button>
+      <div class="site-header__aux" id="site-header__aux">
+        <a class="site-header__mobilebranding" href="{{ account.site.url }}" rel="home">
+          <img src="{{ static('img/logo_red_full.png') }}" alt="Overstory Logo">
+          <span class="screen-reader-text">Home</span>
+        </a>
+        <nav class="site-header__nav">
+          {% if navs.main|length != 0 %}
+          <ul class="site-header__nav__list">
+            {% for item in navs.main %}
+              <li class="site-header__nav__list-item">
+                <a class="site-header__nav__list-item__link" href="{{ item.url }}">{{ item.name }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </nav>
+      </div>
 
     </header>
 
@@ -95,7 +122,17 @@
     </div>
 
     <footer class="site-footer">
-
+      <nav class="site-footer__nav">
+        {% if navs.footer|length != 0 %}
+        <ul class="site-footer__nav__list">
+          {% for item in navs.footer %}
+            <li class="site-footer__nav__list-item">
+              <a class="site-footer__nav__list-item__link" href="{{ item.url }}">{{ item.name }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </nav>
     </footer>
 </div>
 

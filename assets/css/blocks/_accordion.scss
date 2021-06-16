@@ -1,0 +1,9 @@
+.acm {
+  &-trigger {
+    outline: none;
+  } &-controls {
+    &.has-js {
+      display: none;
+    }
+  }
+}

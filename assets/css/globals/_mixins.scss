@@ -97,7 +97,7 @@
 @mixin button-style($color: inherit) {
   display: block;
   position: relative;
-  @include nav-font-style;
+  @include button-font-style;
   padding: 0 2.8rem;
   padding-top: 0.7rem;
   padding-bottom: 0.6rem;

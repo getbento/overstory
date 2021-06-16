@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="69px" viewBox="0 0 35 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Mask</title>
+    <defs>
+        <filter color-interpolation-filters="auto" id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.784314 0 0 0 0 0.192157 0 0 0 0 0.070588 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+        <path d="M15.3613008,0 L15.36,68.04 L19.1982656,68.04 L19.2,0 L15.3613008,0 Z M23.04,68.04 L26.88,68.04 L26.88,20.124507 L23.04,20.124507 L23.04,68.04 Z M7.68,68.04 L11.52,68.04 L11.52,20.124507 L7.68,20.124507 L7.68,68.04 Z M30.72,68.04 L34.56,68.04 L34.56,39.2907042 L30.72,39.2907042 L30.72,68.04 Z M0,68.04 L3.84,68.04 L3.84,39.2907042 L0,39.2907042 L0,68.04 Z" id="path-2"></path>
+    </defs>
+    <g id="Full-Comp-Night" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Pages/Overstory" transform="translate(-529.000000, -352.000000)">
+            <g id="Group-9" transform="translate(486.000000, 94.000000)">
+                <g id="Image-17-Copy-5" transform="translate(0.000000, 212.000000)" filter="url(#filter-1)">
+                    <g transform="translate(43.000000, 46.000000)">
+                        <mask id="mask-3" fill="white">
+                            <use xlink:href="#path-2"></use>
+                        </mask>
+                        <use id="Mask" fill="#FFFFFF" xlink:href="#path-2"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

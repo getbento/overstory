@@ -259,14 +259,19 @@ $futura: futura-pt, sans-serif;
      @mixin nav-font-desktop-style {
        font-family: $futura;
        font-weight: 500;
-       font-size: 1.2rem;
+       font-size: 1.4rem;
        line-height: 1.6rem;
        letter-spacing: 0.25rem;
        text-transform: uppercase;
      }
 
      @mixin nav-font-mobile-style {
-
+       font-family: $futura;
+       font-weight: 500;
+       font-size: 2.2rem;
+       line-height: 2.6rem;
+       letter-spacing: 0.383rem;
+       text-transform: uppercase;
      }
    /* Nav Font */
    @mixin pullout-nav-font-style( $responsive : true, $mobile : false ) {
@@ -387,6 +392,32 @@ $futura: futura-pt, sans-serif;
        letter-spacing: 0.225rem;
        text-transform: none;
      }
+     /* Button Font */
+     @mixin button-font-style( $responsive : true, $mobile : false ) {
+       @if $mobile == false {
+         @include nav-font-desktop-style;
+         @if $responsive == true {
+           @media screen and (max-width: $mobile_max) {
+             @include nav-font-mobile-style;
+           }
+         }
+       } @else {
+         @include nav-font-mobile-style;
+       }
+     }
+       /* Nav Font Components */
+       @mixin button-font-desktop-style {
+         font-family: $futura;
+         font-weight: 500;
+         font-size: 1.2rem;
+         line-height: 1.6rem;
+         letter-spacing: 0.25rem;
+         text-transform: uppercase;
+       }
+
+       @mixin button-font-mobile-style {
+
+       }
 
  @mixin drop-cap {
    &:not(:focus)::first-letter {

@@ -4,17 +4,44 @@
 
 {% import 'template-parts/blocks/wysiwyg.html' as wysiwyg %}
 {% import 'template-parts/blocks/separator.html' as separator %}
+{% import 'template-parts/blocks/team.html' as team %}
+{% import 'template-parts/blocks/accordion.html' as accordion %}
 
 {% block content %}
-  <main>
+  <main class="container-margins">
     <article class="homepage">
-      {% for section in current.fields.flexible_content.sections %}
-        {% if section.sectiontype == 'WYSIWYG' %}
-          {{ wysiwyg.render(section.wysiwyg.content) }}
-        {% elif section.sectiontype == 'Separator' %}
-          {{ separator.render(section.separator.color) }}
-        {% endif %}
-      {% endfor %}
+      <div class="homepage-upper">
+        {% include "svg/welcome.html" %}
+      </div>
+      {% if pages.by_slug.index.fields.header.gallery.images %}
+      <div class="homepage-gallery">
+        <div class="homepage-gallery__inner">
+          <ul class="homepage-gallery__list">
+            {% for item in pages.by_slug.index.fields.header.gallery.images %}
+            <li class="homepage-gallery__list-item">
+              <img src="{{ item.img.url }}" alt="{{ item.img.alt_text }}">
+            </li>
+            {% endfor %}
+          </ul>
+          <div class="homepage-gallery__nav">
+            <span class="homepage-gallery__nav-indicator"></span>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      <div class="homepage-lower">
+        {% for section in pages.by_slug.index.fields.flexible_content.sections %}
+          {% if section.sectiontype == 'WYSIWYG' %}
+            {{ wysiwyg.render(section.wysiwyg.content, section.anchor) }}
+          {% elif section.sectiontype == 'Separator' %}
+            {{ separator.render(section.separator.color) }}
+          {% elif section.sectiontype == 'Team' %}
+            {{ team.render(section.anchor) }}
+          {% elif section.sectiontype == 'Accordion' %}
+            {{ accordion.render(section.accordion.title, section.accordion.sections, section.anchor) }}
+          {% endif %}
+        {% endfor %}
+      </div>
     </article>
   </main>
 {% endblock %}

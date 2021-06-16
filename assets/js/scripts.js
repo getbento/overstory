@@ -29,10 +29,22 @@ $(window).on('load', function() {
 
 $(document).ready(function(){
   /* Generic */
+  $('.site-header__toggle').on('click', function(){
+    isMenuOpen = !isMenuOpen;
+    $(this).attr('aria-expanded', isMenuOpen);
+    $(this).toggleClass('active');
+    $('.site-header__aux').toggleClass('active');
+  }).on('keypress', handleKeypressADA);
+
+  $('a').each(function(){
+    if ( $(this).attr('href').charAt(0) == '#' ) {
+      $(this).addClass('smooth-scroller');
+    }
+  })
+
   if ( $('.modal-area').length ) {
     $('.modal-area').each(function(){
       const prop = $(this).data('propid');
-
 
       $(this).find('.modal-area__dismiss').on('click', function(){
         $(this).closest('.modal-area').removeClass('active');
@@ -61,7 +73,7 @@ $(document).ready(function(){
   if ( $('.smooth-scroller').length ) { // internal links, smooth scrolling
     $('.smooth-scroller').on('click', function(e){
       e.preventDefault();
-      let target = $( $(this).attr('href') ).offset().top;
+      let target = $( $(this).attr('href') ).offset().top - 94;
       let dist = Math.abs($(window).scrollTop() - target);
 
       $([document.documentElement, document.body]).animate({
@@ -90,7 +102,59 @@ $(document).ready(function(){
       }
     });
   }
+
+  if ( $('.acm').length ) {
+    $('.acm').each(function(){
+      const trigger = $(this).find('.acm-trigger');
+      const controls = $(this).find('.acm-controls');
+      controls.addClass('has-js');
+
+      let isAccordionOpen = false;
+
+      trigger.on('click', function() {
+        isAccordionOpen = !isAccordionOpen;
+        $(this).attr('aria-expanded', isAccordionOpen);
+        controls.slideToggle(400);
+      }).on('keypress', handleKeypressADA);
+    });
+  }
   /* END GENERIC SCRIPTS */
+
+  /* Gallery */
+  if ( $('.homepage-gallery').length ) {
+    $('.homepage-gallery').each(function(){
+      const controls = $(this).find('.homepage-gallery__nav');
+      const indicator = $(this).find('.homepage-gallery__nav-indicator');
+
+      const slick = $(this).find('.homepage-gallery__list');
+
+      slick.slick({
+        arrows: true,
+        appendArrows: controls,
+        prevArrow: '<button type="button" class="slick-prev"><span class="screen-reader-text">Previous</span></button>',
+        nextArrow: '<button type="button" class="slick-next"><span class="screen-reader-text">Next</span></button>',
+        dots: true,
+        appendDots: controls,
+        cssEase: 'cubic-bezier(0.64, 0.04, 0.35, 1)'
+      });
+
+      indicator.css('left', (controls.find('.slick-active').offset().left - controls.offset().left) + 'px' );
+      setTimeout(function(){
+        indicator.addClass('active');
+      }, 1);
+
+
+      $(window).on('resize', function(){
+        indicator.css('left', (controls.find('.slick-active').offset().left - controls.offset().left) + 'px' );
+      });
+
+      slick.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        const newActiveDot = controls.find('.slick-dots li').eq(nextSlide);
+        indicator.css('left', (newActiveDot.offset().left - controls.offset().left) + 'px' );
+      });
+    });
+  }
+  /* END GALLERY SCRIPTS */
 }); // document ready end
 
 /*
