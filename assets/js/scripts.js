@@ -113,6 +113,7 @@ $(document).ready(function(){
 
       trigger.on('click', function() {
         isAccordionOpen = !isAccordionOpen;
+        $(this).toggleClass('active');
         $(this).attr('aria-expanded', isAccordionOpen);
         controls.slideToggle(400);
       }).on('keypress', handleKeypressADA);

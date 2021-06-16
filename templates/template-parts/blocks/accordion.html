@@ -6,7 +6,7 @@
     {% if sections %}
       {% for section in sections %}
       <div class="bblock-accordion__module acm">
-        <h3 class="bblock-accordion__subtitle acm-trigger {% if section.style %}is-style{{ section.style }}{% endif %}" aria-controls="{{ section.id }}" aria-expanded="false" role="button" tabindex="0">
+        <h3 class="bblock-accordion__subtitle acm-trigger {% if section.style %}is-style-{{ section.style }}{% endif %}" aria-controls="{{ section.id }}" aria-expanded="false" role="button" tabindex="0">
           {{ section.title }}
         </h3>
         <div class="bblock-accordion__content acm-controls" id="{{ section.id }}">

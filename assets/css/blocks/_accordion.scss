@@ -1,9 +1,74 @@
 .acm {
   &-trigger {
     outline: none;
+    cursor: pointer;
+    padding-right: 4.8rem;
+    position: relative;
+    &::before, &::after {
+      content: '';
+      width: 3.2rem;
+      height: 3.2rem;
+      position: absolute;
+      right: 0;
+      top: calc(50% - 1.6rem);
+      border-radius: 50%;
+      border: 1px solid $offwhite;
+      background-color: $terblack;
+      background-image: linear-gradient(0deg, $offwhite 0%, $offwhite 100%);
+      background-size: 13px 1px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      transition: opacity 300ms $bezier, border-color 300ms $bezier, filter 300ms $bezier;
+    } &::after {
+      transform: rotate(90deg);
+      background-color: transparent;
+    } &.active {
+      &::after {
+        opacity: 0;
+      }
+    }
+
+    &:hover, &:focus {
+      &::before, &::after {
+        filter: invert(1);
+        border-color: $terblack;
+      }
+    }
   } &-controls {
     &.has-js {
       display: none;
     }
+  }
+}
+
+.bblock-accordion {
+  &__module {
+    margin: 2.4rem 0;
+    &:first-child {
+      margin-top: 0;
+    } &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__subtitle {
+    @include h4-style;
+    font-weight: 300;
+    min-height: 3.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include for-size(mobile) {
+      font-weight: 300;
+    } &.is-style-small {
+      @include h5-style;
+      text-transform: none;
+      @include for-size(mobile) {
+        text-transform: none;
+      }
+    }
+  }
+
+  &__content {
+    padding: 2rem 0;
   }
 }
