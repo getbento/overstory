@@ -9,8 +9,10 @@
   justify-content: flex-start;
   pointer-events: none;
   z-index: 10;
+  background-image: linear-gradient(180deg, $terblack 0%, rgba($terblack, 0) 100%);
   @include for-size(mobile) {
     padding: 2rem;
+    background-image: unset;
   }
   &__branding {
     @include flex(0,0,auto);

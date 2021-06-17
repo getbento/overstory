@@ -1,0 +1,35 @@
+.team-module {
+  margin: 4rem 0;
+  @include for-size(mobile) {
+    margin: 2rem 0;
+  }
+  &__name, &__title {
+    @include h5-style;
+    text-transform: none;
+    letter-spacing: 0.25rem;
+    @include for-size(mobile) {
+      text-transform: none;
+      letter-spacing: 0.25rem;
+    }
+  } &__title {
+    font-weight: 300;
+    @include for-size(mobile) {
+      font-weight: 300;
+    }
+  }
+
+  &__trigger {
+    &.is-featured-style {
+      .team-module {
+        &__name, &__title {
+          @include h3-style;
+        } &__title {
+          font-weight: 300;
+          @include for-size(mobile) {
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}

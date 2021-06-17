@@ -1,5 +1,18 @@
-{% macro render(anchor) -%}
-  <section {% if anchor %}id="{{ anchor }}"{% endif%}>
-    <h1>Team</h1>
+{% macro render(anchor, boxes) -%}
+  <section class="bblock-team" {% if anchor %}id="{{ anchor }}"{% endif%}>
+    <h2>Team</h2>
+    <ul>
+    {% for member in boxes.staff.all %}
+      <li class="acm team-module">
+        <div class="acm-trigger team-module__trigger {% if member.fields.featured %}is-featured-style{% endif %}" aria-controls="{{ section.id }}" aria-expanded="false" role="button" tabindex="0">
+          <h3 class="team-module__name">{{ member.name }}</h3>
+          <h4 class="team-module__title">{{ member.title }}</h4>
+        </div>
+        <div class="acm-controls bblock-accordion__content team-module__content">
+          {{ member.bio }}
+        </div>
+      </li>
+    {% endfor %}
+    </ul>
   </section>
 {%- endmacro %}

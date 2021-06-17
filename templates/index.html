@@ -39,7 +39,7 @@
           {% elif section.sectiontype == 'Separator' %}
             {{ separator.render(section.separator.color) }}
           {% elif section.sectiontype == 'Team' %}
-            {{ team.render(section.anchor) }}
+            {{ team.render(section.anchor, boxes) }}
           {% elif section.sectiontype == 'Accordion' %}
             {{ accordion.render(section.accordion.title, section.accordion.sections, section.anchor) }}
           {% endif %}

@@ -1,3 +1,9 @@
 {
-	"engine": "team"
+	"engine": "team",
+  "fields": {
+		"featured": {
+			"title": "Featured",
+			"type": "boolean"
+		}
+	}
 }

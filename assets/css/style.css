@@ -314,11 +314,13 @@ svg {
   justify-content: flex-start;
   pointer-events: none;
   z-index: 10;
+  background-image: linear-gradient(180deg, #110F10 0%, rgba(17, 15, 16, 0) 100%);
 }
 
 @media (max-width: 767px) {
   .site-header {
     padding: 2rem;
+    background-image: unset;
   }
 }
 
@@ -857,6 +859,23 @@ svg {
   margin: 2rem 0;
 }
 
+.bblock-separator {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background-color: rgba(255, 251, 234, 0.4);
+  margin: 4rem 0;
+}
+
+@media (min-width: 768px) {
+  .bblock-separator {
+    position: relative;
+    width: calc(100% + 2.4rem);
+    left: -2.4rem;
+    margin: 5.6rem 0;
+  }
+}
+
 .acm-trigger {
   outline: none;
   cursor: pointer;
@@ -949,4 +968,72 @@ svg {
 
 .bblock-accordion__content {
   padding: 2rem 0;
+}
+
+.team-module {
+  margin: 4rem 0;
+}
+
+@media (max-width: 767px) {
+  .team-module {
+    margin: 2rem 0;
+  }
+}
+
+.team-module__name, .team-module__title {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-transform: none;
+  letter-spacing: 0.25rem;
+}
+
+@media (max-width: 767px) {
+  .team-module__name, .team-module__title {
+    text-transform: none;
+    letter-spacing: 0.25rem;
+  }
+}
+
+.team-module__title {
+  font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  .team-module__title {
+    font-weight: 300;
+  }
+}
+
+.team-module__trigger.is-featured-style .team-module__name, .team-module__trigger.is-featured-style .team-module__title {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-size: 3.5rem;
+  line-height: 4.6rem;
+  letter-spacing: 0.25rem;
+  text-transform: none;
+}
+
+@media screen and (max-width: 767px) {
+  .team-module__trigger.is-featured-style .team-module__name, .team-module__trigger.is-featured-style .team-module__title {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 2.9rem;
+    letter-spacing: 0.179rem;
+    text-transform: none;
+  }
+}
+
+.team-module__trigger.is-featured-style .team-module__title {
+  font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  .team-module__trigger.is-featured-style .team-module__title {
+    font-weight: 300;
+  }
 }

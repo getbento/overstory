@@ -76,6 +76,13 @@ $(document).ready(function(){
       let target = $( $(this).attr('href') ).offset().top - 94;
       let dist = Math.abs($(window).scrollTop() - target);
 
+      if ( isMobile ) {
+        isMenuOpen = false;
+        $('.site-header__toggle').attr('aria-expanded', isMenuOpen);
+        $('.site-header__toggle').removeClass('active');
+        $('.site-header__aux').removeClass('active');
+      }
+
       $([document.documentElement, document.body]).animate({
         scrollTop: target
       }, Math.min(1200, ((dist / 1200) * 1000)));
