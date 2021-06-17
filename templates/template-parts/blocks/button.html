@@ -1,0 +1,11 @@
+{% macro render(anchor, link) -%}
+<div class="bblock-button" {% if anchor %}id="{{ anchor }}"{% endif%}>
+  <a href="{{ link.url }}" class="bblock-button__link"
+  {% if link.target %}
+  target="_blank"
+  {% endif %}
+  >
+    {{ link.title }}
+  </a>
+</div>
+{%- endmacro %}

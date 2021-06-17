@@ -6,6 +6,7 @@
 {% import 'template-parts/blocks/separator.html' as separator %}
 {% import 'template-parts/blocks/team.html' as team %}
 {% import 'template-parts/blocks/accordion.html' as accordion %}
+{% import 'template-parts/blocks/button.html' as button %}
 
 {% block content %}
   <main class="container-margins">
@@ -42,6 +43,8 @@
             {{ team.render(section.anchor, boxes) }}
           {% elif section.sectiontype == 'Accordion' %}
             {{ accordion.render(section.accordion.title, section.accordion.sections, section.anchor) }}
+          {% elif section.sectiontype == 'Button' %}
+            {{ button.render(section.anchor, section.link) }}
           {% endif %}
         {% endfor %}
       </div>

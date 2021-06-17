@@ -39,7 +39,8 @@
                 "WYSIWYG",
                 "Separator",
                 "Accordion",
-                "Team"
+                "Team",
+                "Button"
               ]
             },
             "wysiwyg": {
@@ -94,6 +95,30 @@
                       }
                     }
                   }
+                }
+              }
+            },
+            "link": {
+              "title": "Button",
+              "type": "section",
+              "display_logic": {
+                "sectiontype": {
+                  "operator": "==",
+                  "value": "Button"
+                }
+              },
+              "items": {
+                "url": {
+                  "title": "URL",
+                  "type": "text"
+                },
+                "title": {
+                  "title": "Title",
+                  "type": "text"
+                },
+                "target": {
+                  "title": "Open link in new tab?",
+                  "type": "boolean"
                 }
               }
             }
