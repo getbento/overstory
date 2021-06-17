@@ -1,4 +1,7 @@
 .homepage {
+  padding-bottom: 6rem;
+  border-bottom: 1px solid rgba($offwhite, 0.4);
+  margin-bottom: 9.6rem;
   @include for-size(no-mobile) {
     padding-right: 50%;
     position: relative;
@@ -11,7 +14,7 @@
       justify-content: center;
       flex-direction: column;
       position: relative;
-      z-index: 1;
+      z-index: 4;
     } &-lower {
       max-width: 40rem;
     }
@@ -34,9 +37,9 @@
     }
     &__mark {
       position: absolute;
-      right: 100%;
+      left: calc(100% + 3.2rem);
       top: calc(50% - 7.2rem);
-      transform: translate(50%, -50%);
+      transform: translate(-50%, -50%);
       padding: 4.6rem;
       background: $terblack;
       &::before {
@@ -48,8 +51,8 @@
         height: calc(100% - 3.2rem);
         border: 1px solid rgba($red, 0.4);
       } @include for-size(mobile) {
-        right: 50%;
-        top: 0;
+        left: 50%;
+        top: 100%;
         padding: 2.6rem;
         svg {
           width: 2.1rem;
@@ -72,7 +75,7 @@
       width: 50%;
       height: 100%;
       padding-left: 3.2rem;
-      z-index: 2;
+      z-index: 1;
       &__inner {
         position: sticky;
         position: -webkit-sticky;

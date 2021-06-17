@@ -13,6 +13,9 @@
     <article class="homepage">
       <div class="homepage-upper">
         {% include "svg/welcome.html" %}
+        <div class="homepage-upper__mark">
+          {% include "svg/mark.html" %}
+        </div>
       </div>
       {% if pages.by_slug.index.fields.header.gallery.images %}
       <div class="homepage-gallery">
@@ -26,9 +29,6 @@
           </ul>
           <div class="homepage-gallery__nav">
             <span class="homepage-gallery__nav-indicator"></span>
-          </div>
-          <div class="homepage-upper__mark">
-            {% include "svg/mark.html" %}
           </div>
         </div>
       </div>

@@ -1,0 +1,11 @@
+<footer class="newsletter-footer">
+  <div class="newsletter-footer__inner">
+    <h2 class="newsletter-footer__cta">
+      {{ theme.options.site.newsletter.cta }}
+    </h2>
+    {% include "template-parts/newsletter.html" %}
+  </div>
+  <figure class="newsletter-footer__image">
+    <img src="{{ theme.options.site.newsletter.img.url }}" alt="{{ theme.options.site.newsletter.img.alt_text }}">
+  </figure>
+</footer>

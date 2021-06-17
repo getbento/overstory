@@ -1,0 +1,81 @@
+.newsletter-footer {
+  padding-bottom: 11.2rem;
+  position: relative;
+  padding-top: 4rem;
+  &__inner {
+    max-width: 49rem;
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+    border: 1px solid rgba($red, 0.4);
+    background: $terblack;
+    position: relative;
+    z-index: 2;
+    border-top: 0;
+    padding: 6rem 4rem;
+    padding-top: 8rem;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -4rem;
+      left: 0;
+      width: 100%;
+      height: 6.8rem;
+      background-image: url('../img/mark.svg'), linear-gradient(0deg, rgba($red, 0.4) 0%, rgba($red, 0.4) 100%), linear-gradient(0deg, rgba($red, 0.4) 0%, rgba($red, 0.4) 100%);
+      background-size: 3.4rem auto, calc(50% - 4.8rem) 1px, calc(50% - 4.8rem) 1px;
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-position: center center, left 4rem, right 4rem;
+    }
+  } &__image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(50% + 11.2rem);
+    max-height: calc(100% - 6.8rem);
+    z-index: 1;
+    opacity: 0.5;
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__cta {
+    @include h4-style;
+    color: $white;
+    margin-bottom: 3.6rem;
+  }
+}
+
+.newsletter-form {
+  &__email {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid rgba($offwhite, 0.4);
+    font-size: 2.0rem;
+    font-weight: 300;
+    letter-spacing: 0.25rem;
+    line-height: 2.6rem;
+    padding-bottom: 0.8rem;
+    transition: 300ms $bezier;
+    &:focus {
+      border-bottom-color: $offwhite;
+    }
+  }
+  &__submit {
+    @include button-style;
+    background: transparent;
+    margin: 0 auto;
+    margin-top: 3.2rem;
+    border-color: rgba($offwhite, 0.4);
+    color: $offwhite;
+    &:hover, &:focus {
+      background-color: $offwhite;
+      color: $terblack;
+    }
+  }
+}
