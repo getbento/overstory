@@ -7,7 +7,7 @@
     width: calc(100% - 4rem);
     margin: 0 auto;
     border: 1px solid rgba($red, 0.4);
-    background: $terblack;
+    background: #0C0C0C;
     position: relative;
     z-index: 2;
     border-top: 0;
@@ -76,6 +76,90 @@
     &:hover, &:focus {
       background-color: $offwhite;
       color: $terblack;
+    }
+  }
+}
+
+.site-footer {
+  padding: 0 4rem;
+  margin-top: 24.4rem;
+  padding-bottom: 13.2rem;
+  @include for-size(widescreen) {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  @include for-size(mobile) {
+    margin-top: 7.6rem;
+    padding-bottom: 1.6rem;
+  }
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include for-size(mobile) {
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+  } &__branding {
+    @include flex(1,0,auto);
+    @include for-size(no-mobile) {
+      min-height: 15.3rem;
+    } a {
+      transition: color 300ms $bezier;
+      &:hover, &:focus {
+        color: $red;
+      }
+    } img, svg {
+      @include for-size(mobile) {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 29.4rem;
+        margin-bottom: 3.6rem;
+      }
+    }
+  } &__nav {
+    @include for-size(no-mobile) {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: calc(100% - 32.3rem);
+    } @include for-size(mobile) {
+      order: 3;
+    }
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      &-item {
+        margin-right: 2.4rem;
+        &__link {
+          @include button-font-style;
+          text-decoration: none;
+          transition: color 300ms $bezier;
+          &:hover, &:focus {
+            color: $red;
+          }
+        }
+      }
+    }
+  } &__content {
+    @include flex(1,0,auto);
+    max-width: 32.3rem;
+    color: $offwhite;
+    > * {
+      &:first-child {
+        margin-top: 0;
+      } &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    @include for-size(mobile) {
+      max-width: unset;
+      order: 2;
+      margin-bottom: 4rem;
     }
   }
 }

@@ -13,14 +13,27 @@
       align-items: stretch;
       justify-content: center;
       flex-direction: column;
-      position: relative;
-      z-index: 4;
     } &-lower {
       max-width: 40rem;
+      > * {
+        &:first-child {
+          > p:first-child {
+            @include h4-style;
+            line-height: 3.4rem;
+            font-weight: 300;
+            margin-bottom: 3.2rem;
+            @include for-size(mobile) {
+              font-weight: 300;
+            }
+          }
+        }
+      }
     }
   }
 
   &-upper {
+    position: relative;
+    z-index: 4;
     > svg {
       max-width: 100%;
       width: auto;
