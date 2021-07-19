@@ -146,7 +146,7 @@ h2 {
   line-height: 6rem;
   letter-spacing: 0.25rem;
   text-transform: none;
-  color: #C83112;
+  color: #A05b4e;
 }
 
 h3 {
@@ -331,7 +331,7 @@ svg {
   max-width: 8.9rem;
   margin-right: 9rem;
   pointer-events: auto;
-  color: #C83112;
+  color: #A05b4e;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -390,7 +390,7 @@ svg {
   .site-header__mobilebranding {
     display: block;
     padding-bottom: 4.4rem;
-    border-bottom: 1px solid rgba(255, 251, 234, 0.4);
+    border-bottom: 1px solid rgba(245, 243, 232, 0.4);
     margin-bottom: 7.6rem;
   }
   .site-header__mobilebranding img {
@@ -529,7 +529,7 @@ svg {
 }
 
 .site-header__nav__list-item__link:hover, .site-header__nav__list-item__link:focus {
-  color: #C83112;
+  color: #A05b4e;
 }
 
 .hamburger-icon {
@@ -612,7 +612,7 @@ svg {
   max-width: 49rem;
   width: calc(100% - 4rem);
   margin: 0 auto;
-  border: 1px solid rgba(200, 49, 18, 0.4);
+  border: 1px solid rgba(160, 91, 78, 0.4);
   background: #0C0C0C;
   position: relative;
   z-index: 2;
@@ -628,7 +628,7 @@ svg {
   left: 0;
   width: 100%;
   height: 6.8rem;
-  background-image: url("../img/mark.svg"), linear-gradient(0deg, rgba(200, 49, 18, 0.4) 0%, rgba(200, 49, 18, 0.4) 100%), linear-gradient(0deg, rgba(200, 49, 18, 0.4) 0%, rgba(200, 49, 18, 0.4) 100%);
+  background-image: url("../img/mark.svg"), linear-gradient(0deg, rgba(160, 91, 78, 0.4) 0%, rgba(160, 91, 78, 0.4) 100%), linear-gradient(0deg, rgba(160, 91, 78, 0.4) 0%, rgba(160, 91, 78, 0.4) 100%);
   background-size: 3.4rem auto, calc(50% - 4.8rem) 1px, calc(50% - 4.8rem) 1px;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: center center, left 4rem, right 4rem;
@@ -668,7 +668,7 @@ svg {
 .newsletter-form__email {
   display: block;
   width: 100%;
-  border-bottom: 1px solid rgba(255, 251, 234, 0.4);
+  border-bottom: 1px solid rgba(245, 243, 232, 0.4);
   font-size: 2.0rem;
   font-weight: 300;
   letter-spacing: 0.25rem;
@@ -678,7 +678,7 @@ svg {
 }
 
 .newsletter-form__email:focus {
-  border-bottom-color: #FFFBEA;
+  border-bottom-color: #f5f3e8;
 }
 
 .newsletter-form__submit {
@@ -699,8 +699,8 @@ svg {
   background: transparent;
   margin: 0 auto;
   margin-top: 3.2rem;
-  border-color: rgba(255, 251, 234, 0.4);
-  color: #FFFBEA;
+  border-color: rgba(245, 243, 232, 0.4);
+  color: #f5f3e8;
 }
 
 .newsletter-form__submit:focus, .newsletter-form__submit:hover, .newsletter-form__submit.active {
@@ -709,7 +709,7 @@ svg {
 }
 
 .newsletter-form__submit:hover, .newsletter-form__submit:focus {
-  background-color: #FFFBEA;
+  background-color: #f5f3e8;
   color: #110F10;
 }
 
@@ -765,7 +765,7 @@ svg {
 }
 
 .site-footer__branding a:hover, .site-footer__branding a:focus {
-  color: #C83112;
+  color: #A05b4e;
 }
 
 @media (max-width: 767px) {
@@ -815,7 +815,7 @@ svg {
 }
 
 .site-footer__nav__list-item__link:hover, .site-footer__nav__list-item__link:focus {
-  color: #C83112;
+  color: #A05b4e;
 }
 
 .site-footer__content {
@@ -823,7 +823,7 @@ svg {
   flex-shrink: 0;
   flex-basis: auto;
   max-width: 32.3rem;
-  color: #FFFBEA;
+  color: #f5f3e8;
 }
 
 .site-footer__content > *:first-child {
@@ -848,7 +848,7 @@ svg {
 /* for page template and archive structure */
 .homepage {
   padding-bottom: 6rem;
-  border-bottom: 1px solid rgba(255, 251, 234, 0.4);
+  border-bottom: 1px solid rgba(245, 243, 232, 0.4);
   margin-bottom: 9.6rem;
 }
 
@@ -921,6 +921,13 @@ svg {
   transform: translate(-50%, -50%);
   padding: 4.6rem;
   background: #110F10;
+  color: #A05b4e;
+}
+
+.homepage-upper__mark svg {
+  max-width: 3.6rem;
+  width: auto;
+  height: auto;
 }
 
 .homepage-upper__mark::before {
@@ -930,7 +937,7 @@ svg {
   top: 1.6rem;
   width: calc(100% - 3.2rem);
   height: calc(100% - 3.2rem);
-  border: 1px solid rgba(200, 49, 18, 0.4);
+  border: 1px solid rgba(160, 91, 78, 0.4);
 }
 
 @media (max-width: 767px) {
@@ -987,7 +994,7 @@ svg {
   position: relative;
   margin-top: 1.6rem;
   align-self: center;
-  background-image: linear-gradient(0deg, #c83112 0%, #c83112 100%);
+  background-image: linear-gradient(0deg, #a05b4e 0%, #a05b4e 100%);
   background-size: 100% 1px;
   background-repeat: no-repeat;
   background-position: left center;
@@ -1000,7 +1007,7 @@ svg {
   width: 3.6rem;
   height: 3.6rem;
   border-radius: 50%;
-  border: 1px solid #C83112;
+  border: 1px solid #A05b4e;
   pointer-events: none;
   opacity: 0;
   box-sizing: border-box;
@@ -1024,6 +1031,7 @@ svg {
   flex-shrink: 0;
   flex-basis: auto;
   margin: 0 3.2rem;
+  color: #A05b4e;
 }
 
 .homepage-gallery__nav .slick-prev {
@@ -1067,7 +1075,7 @@ svg {
   top: calc(50% - 0.5rem);
   width: 1rem;
   height: 1rem;
-  border: 1px solid #C83112;
+  border: 1px solid #A05b4e;
   border-radius: 50%;
   transition: background 300ms cubic-bezier(0.64, 0.04, 0.35, 1);
   box-sizing: border-box;
@@ -1078,7 +1086,7 @@ svg {
 }
 
 .homepage-gallery__nav .slick-dots li.slick-active button::before {
-  background-color: #C83112;
+  background-color: #A05b4e;
 }
 
 .homepage-gallery__list-item {
@@ -1129,7 +1137,7 @@ svg {
   width: 100%;
   height: 1px;
   border: 0;
-  background-color: rgba(255, 251, 234, 0.4);
+  background-color: rgba(245, 243, 232, 0.4);
   margin: 4rem 0;
 }
 
@@ -1157,9 +1165,9 @@ svg {
   right: 0;
   top: calc(50% - 1.6rem);
   border-radius: 50%;
-  border: 1px solid #FFFBEA;
+  border: 1px solid #f5f3e8;
   background-color: #110F10;
-  background-image: linear-gradient(0deg, #FFFBEA 0%, #FFFBEA 100%);
+  background-image: linear-gradient(0deg, #f5f3e8 0%, #f5f3e8 100%);
   background-size: 13px 1px;
   background-repeat: no-repeat;
   background-position: center center;
