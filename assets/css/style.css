@@ -730,7 +730,7 @@ svg {
 @media (max-width: 767px) {
   .site-footer {
     margin-top: 7.6rem;
-    padding-bottom: 1.6rem;
+    padding-bottom: 4rem;
   }
 }
 
