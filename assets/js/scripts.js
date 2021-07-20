@@ -163,6 +163,28 @@ $(document).ready(function(){
     });
   }
   /* END GALLERY SCRIPTS */
+
+  /* DISCO SCRIPTS */
+  if ( $('.homepage-upper__mark').length ) {
+    $('.homepage-upper__mark').each(function(index){
+      $(this).on('mouseover', function(){
+        $('body').addClass('disco-active');
+      });
+
+      $(this).on('focus', function(){
+        $('body').addClass('disco-active');
+      });
+
+      $(this).on('mouseout', function(){
+        $('body').removeClass('disco-active');
+      });
+
+      $(this).on('blur', function(){
+        $('body').removeClass('disco-active');
+      });
+    });
+  }
+  /* END DISCO SCRIPTS */
 }); // document ready end
 
 /*

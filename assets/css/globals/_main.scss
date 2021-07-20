@@ -81,6 +81,7 @@ input, button {
 
 .container-margins {
   @include container-margins;
+  position: relative;
 }
 
 .content-margins {

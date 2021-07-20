@@ -248,6 +248,7 @@ input, button {
   max-width: 986px;
   margin-left: auto !important;
   margin-right: auto !important;
+  position: relative;
 }
 
 @media (min-width: 1440px) {
@@ -899,6 +900,11 @@ svg {
   height: auto;
   margin: 0 auto;
   display: block;
+  transition: filter 500ms cubic-bezier(0.64, 0.04, 0.35, 1);
+}
+
+.homepage-upper > svg * {
+  transition: stroke 500ms cubic-bezier(0.64, 0.04, 0.35, 1);
 }
 
 @media (max-width: 767px) {
@@ -1113,6 +1119,144 @@ svg {
 
 .homepage-gallery__list:not(.slick-initialized) .homepage-gallery__list-item:nth-child(n+2) {
   display: none;
+}
+
+.disco {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 21;
+  pointer-events: none;
+  transform: translateY(-34rem);
+  transition: transform 400ms cubic-bezier(0.64, 0.04, 0.35, 1);
+  transition-delay: 0ms;
+  background-image: linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%);
+  background-size: 1px 8rem;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.disco-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 500ms cubic-bezier(0.64, 0.04, 0.35, 1);
+  z-index: -1;
+}
+
+.disco-background img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.disco-video {
+  position: absolute;
+  display: block;
+  height: 32rem;
+  width: 56rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.disco-video__container {
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 22rem;
+  filter: contrast(1.5);
+}
+
+.disco-video__container::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.disco-video__positioner {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 8rem;
+}
+
+.disco-video__positioner::before {
+  content: '';
+  position: absolute;
+  right: -1.6rem;
+  top: -1.6rem;
+  width: 11.8rem;
+  height: 11.4rem;
+  background-image: url("../img/sparkle_r.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation-name: discoTwinkle;
+  animation-iteration-count: infinite;
+  animation-duration: 2400ms;
+}
+
+.disco-video__positioner::after {
+  content: '';
+  position: absolute;
+  left: -2.4rem;
+  bottom: -2.4rem;
+  width: 11.8rem;
+  height: 11.4rem;
+  background-image: url("../img/sparkle_l.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation-name: discoTwinkle;
+  animation-iteration-count: infinite;
+  animation-duration: 2800ms;
+}
+
+@keyframes discoTwinkle {
+  0% {
+    transform: scale(0);
+  }
+  5% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1);
+  }
+  55% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+body.disco-active .homepage-upper > svg {
+  filter: drop-shadow(0px 0px 3px #FFFFFF) drop-shadow(0px 0px 4px #FF9A9A) drop-shadow(0px 2px 30px #FF9A9A);
+}
+
+body.disco-active .homepage-upper > svg * {
+  stroke: #FF9A9A !important;
+}
+
+body.disco-active .disco {
+  transform: translateY(0);
+  transition: transform 800ms cubic-bezier(0.64, 0.04, 0.35, 1);
+  transition-delay: 60ms;
+}
+
+body.disco-active .disco-background {
+  opacity: 1;
+  transition-delay: 0ms;
 }
 
 /*--------------------------------*\
