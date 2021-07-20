@@ -950,6 +950,7 @@ svg {
   .homepage-upper__mark {
     left: 50%;
     top: 100%;
+    transform: translate(-50%, -25%);
     padding: 2.6rem;
   }
   .homepage-upper__mark svg {
@@ -1172,7 +1173,7 @@ svg {
   overflow: hidden;
   border-radius: 50%;
   width: 22rem;
-  filter: contrast(1.5);
+  filter: brightness(0.9) contrast(1.7);
 }
 
 .disco-video__container::before {
