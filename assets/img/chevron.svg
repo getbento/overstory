@@ -1,16 +1,11 @@
 <svg width="14px" height="25px" viewBox="0 0 14 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Arrow</title>
-    <defs>
-        <filter color-interpolation-filters="auto" id="filter-1">
-            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.784314 0 0 0 0 0.192157 0 0 0 0 0.070588 0 0 0 1.000000 0"></feColorMatrix>
-        </filter>
-    </defs>
-    <g id="Widescreen" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Widescreen" fill="none" fill-rule="evenodd">
         <g id="Overstory-Landing" transform="translate(-1059.000000, -743.000000)">
             <g id="Group-21" transform="translate(197.500000, 94.000000)">
-                <g id="Group-7" transform="translate(472.994986, 0.000000)" filter="url(#filter-1)">
+                <g id="Group-7" transform="translate(472.994986, 0.000000)">
                     <g transform="translate(143.005014, 643.000000)">
-                        <g id="Group-4" transform="translate(0.000000, 6.000000)" stroke="#FFB990">
+                        <g id="Group-4" transform="translate(0.000000, 6.000000)" stroke="#A05b4e">
                             <path d="M246.355429,12.1445709 L258.5,0 M246.355429,12.1102815 L258.5,24.2548524" id="Combined-Shape-Copy" transform="translate(252.427715, 12.127426) scale(-1, 1) translate(-252.427715, -12.127426) "></path>
                         </g>
                     </g>
