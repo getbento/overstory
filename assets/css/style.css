@@ -225,6 +225,10 @@ ul, ol {
   list-style: none;
 }
 
+em, i {
+  font-style: italic;
+}
+
 input, button {
   -webkit-appearance: none;
   -moz-appearance: none;
