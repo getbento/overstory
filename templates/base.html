@@ -139,6 +139,14 @@
         </div>
         {% endif %}
         <nav class="site-footer__nav">
+          {% if theme.options.footer.socials.instagram %}
+          <li class="site-footer__nav__list-item">
+            <a class="site-footer__nav__list-item__link" href="#" target="_blank">
+              {% include "svg/instagram.html" %}
+              <span class="screen-reader-text">Find Overstory on Instagram</span>
+            </a>
+          </li>
+          {% endif %}
           {% if navs.footer|length != 0 %}
           <ul class="site-footer__nav__list">
             {% for item in navs.footer %}
