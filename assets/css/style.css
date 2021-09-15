@@ -520,6 +520,7 @@ svg {
   text-transform: uppercase;
   text-decoration: none;
   transition: color 300ms cubic-bezier(0.64, 0.04, 0.35, 1);
+  position: relative;
 }
 
 @media screen and (max-width: 767px) {
@@ -535,6 +536,16 @@ svg {
 
 .site-header__nav__list-item__link:hover, .site-header__nav__list-item__link:focus {
   color: #A05b4e;
+}
+
+.site-header__nav__list-item__link span {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  opacity: 0 !important;
+  background: transparent !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .hamburger-icon {
