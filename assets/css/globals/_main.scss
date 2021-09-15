@@ -71,6 +71,10 @@ ul, ol {
   list-style: none;
 }
 
+em, i {
+  font-style: italic;
+}
+
 input, button {
   @include reset-appearance;
   background: transparent;

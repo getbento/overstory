@@ -22,7 +22,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="{{ static('js/slick/slick.css') }}">
   <link rel="stylesheet" href="{{ static('css/normalize.css') }}">
-  <link rel="stylesheet" href="{{ static('css/style.css') }}">
+  <link rel="stylesheet" href="{{ static('css/style.css') }}?ver=1.0.1">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -139,6 +139,14 @@
         </div>
         {% endif %}
         <nav class="site-footer__nav">
+          {% if theme.options.footer.socials.instagram %}
+          <li class="site-footer__nav__list-item">
+            <a class="site-footer__nav__list-item__link" href="#" target="_blank">
+              {% include "svg/instagram.html" %}
+              <span class="screen-reader-text">Find Overstory on Instagram</span>
+            </a>
+          </li>
+          {% endif %}
           {% if navs.footer|length != 0 %}
           <ul class="site-footer__nav__list">
             {% for item in navs.footer %}
@@ -155,6 +163,20 @@
 
 <script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="   crossorigin="anonymous"></script>
 <script src="{{ static('js/slick/slick.min.js') }}"></script>
-<script src="{{ static('js/scripts.js') }}"></script>
+<script src="{{ static('js/scripts.js') }}?ver=1.0.1"></script>
+<script src="https://widgets.resy.com/embed.js"></script>
+<script>
+   
+
+    const links = document.querySelectorAll('a');
+    for ( let i = 0; i < links.length; i++ ) {
+      if ( links[i].getAttribute('href').includes('resy') ) {
+        resyWidget.addButton(links[i], {"venueId":53052,"apiKey":"GyDP0osR0mAFIrOSY3sRtegCV7k54eK5","replace":false});
+        links[i].addEventListener('click', function(e){
+            e.preventDefault()
+        });
+      }
+    }
+</script>
 </body>
 </html>

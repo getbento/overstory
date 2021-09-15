@@ -34,6 +34,16 @@
                 "copyright": {
                   "title": "Copyright",
                   "type": "wysiwyg"
+                },
+                "socials": {
+                  "title": "Social Media",
+                  "type": "section",
+                  "items": {
+                    "instagram": {
+                      "title": "Instagram",
+                      "type": "text"
+                    }
+                  }
                 }
         			}
         		},
